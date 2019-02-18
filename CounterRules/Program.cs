@@ -62,24 +62,41 @@ namespace CounterRules
         {
 
             CounterEngine.CounterEngine engine = new CounterEngine.CounterEngine();
-            string[] AllRules = Enum.GetValues(enumType: typeof(CounterRules.Rules.CounterRules));
+            Array AllRules = Enum.GetValues(enumType: typeof(CounterRules.Rules.CounterRules));
            // string[] Rules = AllRules.Split('|');
             List<string> listOfInputs = new List<string>();
             foreach(var rule in AllRules)
             {
-                var operation = Enum.Parse(enumType: typeof(CounterRules.Rules.CounterRules),(string) rule);
+
+                System.Diagnostics.Debug.Print(rule.ToString());
+
+                CounterRules.Rules.CounterRules operation = (CounterRules.Rules.CounterRules) Enum.Parse(typeof(CounterRules.Rules.CounterRules),Convert.ToString(rule) );
+                var description = engine.GetRuleDescription(operation);
                 var pattern = @"{(.*?)}";
-                var matches = Regex.Matches(rule, pattern);
+                var matches = Regex.Matches(description, pattern);
                 foreach(var input in matches)
                 {
                     Console.Write(input);
-                    string regExInput = Console.ReadLine();
+                    string regExInput =CheckInput(Console.ReadLine());
+                    if (regExInput.Equals(string.Empty))
+                        continue;
                     listOfInputs.Add(regExInput);
+                }
+                if(listOfInputs.Count>0)
+                {
+                    engine.Process(operation, listOfInputs);
                 }
 
             }
         }
 
-
+        private static string CheckInput(string v )
+        {
+            if(v=="-1")
+            {
+                return string.Empty;
+            }
+            return v;
+        }
     }
 }
