@@ -1,0 +1,7 @@
+e:\ComBank\CounterRules\CounterRules\CounterRules\bin\Debug\CounterRules.exe.config
+e:\ComBank\CounterRules\CounterRules\CounterRules\bin\Debug\CounterRules.exe
+e:\ComBank\CounterRules\CounterRules\CounterRules\bin\Debug\CounterRules.pdb
+e:\ComBank\CounterRules\CounterRules\CounterRules\obj\Debug\CounterRules.csprojResolveAssemblyReference.cache
+e:\ComBank\CounterRules\CounterRules\CounterRules\obj\Debug\CounterRules.csproj.CoreCompileInputs.cache
+e:\ComBank\CounterRules\CounterRules\CounterRules\obj\Debug\CounterRules.exe
+e:\ComBank\CounterRules\CounterRules\CounterRules\obj\Debug\CounterRules.pdb
