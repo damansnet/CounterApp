@@ -21,6 +21,14 @@ namespace CounterRules.CounterEngine
             return stringBuilder.ToString();
         }
 
-        
+        public string GetRuleDescription(CounterRules.Rules.CounterRules  counterRule)
+        {
+            return counterRule.GetDescription();
+        }
+
+        internal void Process(Rules.CounterRules operation, List<string> listOfInputs)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -65,13 +65,15 @@ namespace CounterRules
             Array AllRules = Enum.GetValues(enumType: typeof(CounterRules.Rules.CounterRules));
            // string[] Rules = AllRules.Split('|');
             List<string> listOfInputs = new List<string>();
-            foreach(var rule in AllRules)
+            Console.WriteLine("You can skip rule by entering -1 for input.");
+            foreach (var rule in AllRules)
             {
 
                 System.Diagnostics.Debug.Print(rule.ToString());
 
                 CounterRules.Rules.CounterRules operation = (CounterRules.Rules.CounterRules) Enum.Parse(typeof(CounterRules.Rules.CounterRules),Convert.ToString(rule) );
                 var description = engine.GetRuleDescription(operation);
+                Console.WriteLine(description);
                 var pattern = @"{(.*?)}";
                 var matches = Regex.Matches(description, pattern);
                 foreach(var input in matches)
