@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CounterRules", "CounterRules\CounterRules.csproj", "{9C6CEAFC-B3F2-4919-8DC9-C80D3361156E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Counter.Engine", "Counter.Engine\Counter.Engine.csproj", "{7B899CC0-B39B-409F-B869-2FF2F39EF0F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Counter.Engine", "Counter.Engine\Counter.Engine.csproj", "{7B899CC0-B39B-409F-B869-2FF2F39EF0F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

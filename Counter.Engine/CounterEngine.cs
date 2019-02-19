@@ -53,7 +53,7 @@ namespace Counter.Engine
         private int FindLongestWordStartingWith(List<string> listOfInputs)
         {
             var matches = Regex.Matches(_inputText, string.Format(_baseRegEx, listOfInputs.FirstOrDefault()));
-            var longestLength = matches.Cast<Match>().Select(m => m.Length).Max();
+            var longestLength =(matches.Count>0)? matches.Cast<Match>().Select(m => m.Length).Max() : 0;
             Console.WriteLine(longestLength);
             return longestLength;
         }
@@ -64,7 +64,7 @@ namespace Counter.Engine
             var sequenceStartsWithPattern = string.Format(_baseRegEx, listOfInputs.Skip(1).First());
             var combinedPattern =wordStartsWithPattern+@"\s"+sequenceStartsWithPattern ;
             var match = Regex.Matches(_inputText, combinedPattern);
-            var numberofOccurence = match.Cast<Match>().Select(m => m.Groups[2].Value).Count();
+            var numberofOccurence =(match.Count>0) ? match.Cast<Match>().Select(m => m.Groups[2].Value).Count() : 0;
             Console.WriteLine(numberofOccurence);
             return numberofOccurence;
         }
@@ -74,7 +74,7 @@ namespace Counter.Engine
             var patternFindWordStarts = string.Format(_baseRegEx, listOfInputs.FirstOrDefault());
             var findLetterRegEx = string.Format(_occurenceRegEx, listOfInputs.Skip(1).First());
             var matches = Regex.Matches(_inputText,patternFindWordStarts);
-            var totalLength = matches.Cast<Match>().Select(m => Regex.Matches(m.Value, findLetterRegEx).Count).Sum();
+            var totalLength =(matches.Count>0)?  matches.Cast<Match>().Select(m => Regex.Matches(m.Value, findLetterRegEx).Count).Sum() : 0;
             Console.WriteLine(totalLength);
             return totalLength;
         }
@@ -82,10 +82,11 @@ namespace Counter.Engine
         private int FindAverageLengthWordsStartingWith(List<string> listOfInputs)
         {
             var pattern = string.Format(_baseRegEx, listOfInputs.FirstOrDefault());
-            var matches = Regex.Matches(_inputText, pattern);// "(?<!\w)[a|A]\w+");
+            var matches = Regex.Matches(_inputText, pattern);
 
             var totalLength = matches.Cast<Match>().Select(m => m.Length).Sum();
-            var average = totalLength / matches.Cast<Match>().Count();
+            var average =(matches.Count>0)?totalLength / matches.Cast<Match>().Count():0;
+            Console.WriteLine(average);
             return average;
         }
 
