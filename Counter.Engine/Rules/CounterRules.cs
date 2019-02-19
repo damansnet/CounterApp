@@ -26,7 +26,7 @@ namespace Counter.Engine.Rules
             OutputHash.Add(CounterRules.average_length_of_words_starting_with, "average_length_of_words_starting_with_{0}.txt");
             OutputHash.Add(CounterRules.count_of_n_in_words_starting_with_x, "count_of_{1}_in_words_starting_with_{0}.txt");
             OutputHash.Add(CounterRules.count_of_sequence_of_words_starting_with_c_and_a, "count_of_sequence_of_words_starting_with_{0}_and_{1}.txt");
-            OutputHash.Add(CounterRules.longest_word_starting_with_abc, "longest_word_starting_with_{1}.txt");
+            OutputHash.Add(CounterRules.longest_word_starting_with_abc, "longest_word_starting_with_{0}.txt");
 
         }
 
