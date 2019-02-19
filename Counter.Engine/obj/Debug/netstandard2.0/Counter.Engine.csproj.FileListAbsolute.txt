@@ -1,0 +1,9 @@
+C:\sample\CounterApp-master\CounterApp-master\Counter.Engine\bin\Debug\netstandard2.0\Counter.Engine.deps.json
+C:\sample\CounterApp-master\CounterApp-master\Counter.Engine\bin\Debug\netstandard2.0\Counter.Engine.dll
+C:\sample\CounterApp-master\CounterApp-master\Counter.Engine\bin\Debug\netstandard2.0\Counter.Engine.pdb
+C:\sample\CounterApp-master\CounterApp-master\Counter.Engine\obj\Debug\netstandard2.0\Counter.Engine.csproj.CoreCompileInputs.cache
+C:\sample\CounterApp-master\CounterApp-master\Counter.Engine\obj\Debug\netstandard2.0\Counter.Engine.AssemblyInfoInputs.cache
+C:\sample\CounterApp-master\CounterApp-master\Counter.Engine\obj\Debug\netstandard2.0\Counter.Engine.AssemblyInfo.cs
+C:\sample\CounterApp-master\CounterApp-master\Counter.Engine\obj\Debug\netstandard2.0\Counter.Engine.dll
+C:\sample\CounterApp-master\CounterApp-master\Counter.Engine\obj\Debug\netstandard2.0\Counter.Engine.pdb
+C:\sample\CounterApp-master\CounterApp-master\Counter.Engine\obj\Debug\netstandard2.0\Counter.Engine.csprojAssemblyReference.cache
